@@ -6,6 +6,28 @@
 </head>
 <body>
 <h1>Idea Bench</h1>
-<p>Welcome to the Idea Bench! This is a place where you can share your innovative ideas
+
+<form id="ideaForm">
+    <input type="text" id="title-input" placeholder="Working title" required>
+    <input type="text" id="pitch-input" placeholder="One-line pitch"
+    <select id="stage-input">
+        <option value="raw">Raw spark</option>
+        <option value="developing">Developing</option>
+        <option value="validating">Validating</option>
+    </select>
+    <button type="submit">Add Idea</button>
+</form>
+
+<div id="cards-container">
+    <div class="idea-card">
+        <h3>Hadshake-style job board</h3>
+        <p>Match students to club roles like HAndshake matches them to employers.</p>
+        <span class="stage-tag">developing</span>
+</div>
+<div class="idea-card">
+    <h3>MAP application concept</h3>
+    <p>Health, AI, and sustainability intersection.</p>
+    <span class="stage-tag">raw</span>
+
 </body>
 </html>

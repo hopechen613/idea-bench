@@ -1,5 +1,6 @@
-document.title = (typeof window.supabase) + ' | ' + (document.getElementById('idea-form') ? 'form-found' : 'form-missing');
 const SUPABASE_URL = 'https://bcnnbaajbgihfgwiuzjs.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_gvWWnIz28P4JixSg2Z7-Fw_Xc6NYbu3';
+const db = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 const SUPABASE_KEY = 'sb_publishable_gvWWnIz28P4JixSg2Z7-Fw_Xc6NYbu3';
 const db = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 

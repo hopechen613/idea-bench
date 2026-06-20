@@ -8,20 +8,49 @@
 <body>
 <h1>Idea Bench</h1>
 
-<form id="idea-form">
+<div class="tabs">
+  <button class="tab-btn active" data-tab="ideas-tab">Ideas</button>
+  <button class="tab-btn" data-tab="applications-tab">Applications</button>
+</div>
+
+<section id="ideas-tab" class="tab-panel">
+  <form id="idea-form">
     <input type="text" id="title-input" placeholder="Working title" required>
     <input type="text" id="pitch-input" placeholder="One-line pitch">
     <select id="stage-input">
-        <option value="raw">Raw spark</option>
-        <option value="developing">Developing</option>
-        <option value="validating">Validating</option>
+      <option value="raw">Raw spark</option>
+      <option value="developing">Developing</option>
+      <option value="validating">Validating</option>
     </select>
     <button type="submit">Add Idea</button>
-</form>
+  </form>
 
-<div id="cards-container"></div>
+  <div id="cards-container"></div>
+</section>
+
+<section id="applications-tab" class="tab-panel" style="display: none;">
+  <form id="application-form">
+    <input type="text" id="org-input" placeholder="Organization" required>
+    <input type="text" id="role-input" placeholder="Role" required>
+    <select id="status-input">
+      <option value="not_started">Not started</option>
+      <option value="applied">Applied</option>
+      <option value="interview">Interview</option>
+      <option value="offer">Offer</option>
+      <option value="rejected">Rejected</option>
+    </select>
+    <input type="date" id="deadline-input">
+    <input type="url" id="link-input" placeholder="Application link (optional)">
+    <textarea id="notes-input" placeholder="Notes / next steps"></textarea>
+    <button type="submit">Add Application</button>
+  </form>
+
+  <div id="applications-container"></div>
+</section>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="script.js"></script>
+<script src="applications.js"></script>
+<script src="tabs.js"></script>
 </body>
 </html>

@@ -11,6 +11,7 @@
 <div class="tabs">
   <button class="tab-btn active" data-tab="ideas-tab">Ideas</button>
   <button class="tab-btn" data-tab="applications-tab">Applications</button>
+  <button class="tab-btn" data-tab="todos-tab">To Dos</button>
 </div>
 
 <section id="ideas-tab" class="tab-panel">
@@ -48,9 +49,18 @@
   <div id="applications-container"></div>
 </section>
 
+<section id="todos-tab" class="tab-panel" style="display: none;">
+  <form id="todo-form">
+    <input type="text" id="project-name-input" placeholder="Project name" required>
+    <button type="submit">Add To Do</button>
+  </form>
+
+  <div id="todos-container"></div>
+</section>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="script.js"></script>
 <script src="applications.js"></script>
+<script src="todos.js"></script>
 <script src="tabs.js"></script>
 </body>
 </html>
